@@ -21,7 +21,7 @@ transform = transforms.Compose([
 ])
 
 # load data
-data_dir = '/media/zhangsc/Little_Disk/ntu/ee6483/datasets'
+data_dir = os.path.join(os.getcwd(), 'datasets')
 train_dataset = ImageFolder(root=f"{data_dir}/train", transform=transform)
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 
